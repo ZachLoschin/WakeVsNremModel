@@ -243,7 +243,6 @@ for i in range(len(lfp['WAKE'])):
     output.append(1)
 for i in range(len(lfp['NREM'])):
     output.append(0)
-#print(output)
 
 # Split data into train and test sets
 from sklearn.model_selection import train_test_split
