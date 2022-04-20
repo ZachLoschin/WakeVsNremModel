@@ -222,7 +222,7 @@ plt.title("Median Delta vs Mean Spike(5-12Hz) in NREM and WAKE Mice")
 plt.scatter(median_delta_nrem, mean_spike_nrem, color = 'b', marker='o', label="NREM");
 plt.scatter(median_delta_wake, mean_spike_wake, color = 'r', marker='o', label="WAKE");
 plt.xlabel("Delta Wave Median Power")
-plt.ylabel("Theta Wave Median Power")
+plt.ylabel("5-12Hz Mean Power")
 plt.legend()
 plt.show()
 
@@ -231,8 +231,8 @@ plt.figure()
 plt.title("Maximum Delta vs Mean Spike(5-12Hz) in NREM and WAKE Mice")
 plt.scatter(max_delta_nrem, max_spike_nrem, color = 'b', marker='o', label="NREM");
 plt.scatter(max_delta_wake, max_spike_wake, color = 'r', marker='o', label="WAKE");
-plt.xlabel("Delta Wave Median Power")
-plt.ylabel("Theta Wave Median Power")
+plt.xlabel("Delta Wave Max Power")
+plt.ylabel("5-12Hz Spike Max Power")
 plt.legend()
 plt.show()
 
