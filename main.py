@@ -1,6 +1,5 @@
 import h5py
 import numpy as np
-import torch
 
 filepath = 'Rat08-20130711_017.h5'  # data file
 f = h5py.File(filepath, 'r')  # read data with h5 format
@@ -219,7 +218,7 @@ plt.show()
 
 # Spike data visualization
 plt.figure()
-plt.title("Theta vs Mean Spike(5-12Hz) in NREM and WAKE Mice")
+plt.title("Median Delta vs Mean Spike(5-12Hz) in NREM and WAKE Mice")
 plt.scatter(median_delta_nrem, mean_spike_nrem, color = 'b', marker='o', label="NREM");
 plt.scatter(median_delta_wake, mean_spike_wake, color = 'r', marker='o', label="WAKE");
 plt.xlabel("Delta Wave Median Power")
@@ -229,7 +228,7 @@ plt.show()
 
 # Maximum spike and max delta
 plt.figure()
-plt.title("Theta vs Mean Spike(5-12Hz) in NREM and WAKE Mice")
+plt.title("Maximum Delta vs Mean Spike(5-12Hz) in NREM and WAKE Mice")
 plt.scatter(max_delta_nrem, max_spike_nrem, color = 'b', marker='o', label="NREM");
 plt.scatter(max_delta_wake, max_spike_wake, color = 'r', marker='o', label="WAKE");
 plt.xlabel("Delta Wave Median Power")
@@ -301,10 +300,10 @@ model.summary()
 model.compile(optimizer=tf.keras.optimizers.Adam(),
           loss='binary_crossentropy',metrics=["accuracy"])
 
-epochs = 1000
+epochs = 1500
 history = model.fit(
     input,
     output,
     epochs = epochs,
-    callbacks=[tf.keras.callbacks.LearningRateScheduler(lambda epoch: 0.001)]
+    callbacks=[tf.keras.callbacks.LearningRateScheduler(lambda epoch: 0.0005)]
     )

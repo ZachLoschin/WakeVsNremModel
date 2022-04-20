@@ -1,0 +1,9 @@
+keras
+Keras-Preprocessing
+matplotlib
+numpy
+tensorflow
+tensorflow-io-gcs-filesystem
+h5py
+scipy
+sklearn
