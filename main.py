@@ -2,7 +2,7 @@ import h5py
 import numpy as np
 import torch
 
-filepath = '/content/Rat08-20130711_017.h5'  # data file
+filepath = 'Rat08-20130711_017.h5'  # data file
 f = h5py.File(filepath, 'r')  # read data with h5 format
 fs = f.attrs['fs'][0]  # get sampling frequency of LFP signal (Hz)
 
@@ -260,7 +260,7 @@ from sklearn import svm
 #Create a svm Classifier
 clf = svm.SVC(kernel='linear') # Linear Kernel
 
-#Train the model using the training sets
+#Train the model using the training setsp
 clf.fit(X_train.reshape(-1,1), y_train)
 
 #Predict the response for test dataset
